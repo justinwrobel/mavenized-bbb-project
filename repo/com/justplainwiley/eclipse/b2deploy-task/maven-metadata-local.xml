@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.justplainwiley.eclipse</groupId>
+  <artifactId>b2deploy-task</artifactId>
+  <versioning>
+    <release>1.1</release>
+    <versions>
+      <version>1.1</version>
+    </versions>
+    <lastUpdated>20130116204809</lastUpdated>
+  </versioning>
+</metadata>

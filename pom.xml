@@ -1,0 +1,126 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example</groupId>
+	<artifactId>example</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>example</name>
+	<properties>
+		<bbhost>www.host.com</bbhost>
+	</properties>
+	
+	<repositories>
+		<!-- Local Blackboard repo -->
+		<!-- 
+		Create a local Maven repo with the instructions in the following link
+		http://projects.oscelot.org/gf/project/mavenized_bbb/wiki/?pagename=CreateMavenBlackboardRepository
+		-->
+		<repository>
+			<id>bb</id>
+			<name>Blackboard Repository</name>
+			<url>file://${project.basedir}/repo</url>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<!-- Local Blackboard repo -->
+			<id>bb</id>
+			<name>Blackboard Repository</name>
+			<url>file://${project.basedir}/repo</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencies>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>3.0.5.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>0.9.18</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl104-over-slf4j</artifactId>
+			<version>1.4.2</version>
+		</dependency>
+
+		<!-- Exclude commons-logging by claiming it will be provided -->
+		<!-- so we don't have exclude it everywhere -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Blackboard -->
+		<!--
+		Install the blackboard jars by following the instructions at 
+		http://projects.oscelot.org/gf/project/mavenized_bbb/wiki/?pagename=CreateMavenBlackboardRepository
+		-->
+		<dependency>
+			<groupId>blackboard.bb</groupId>
+			<artifactId>taglibs</artifactId>
+			<version>9.1SP11</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>example</finalName>
+		<plugins>
+			<!-- The following task is called by executing 'mvn antrun:run' -->
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.5</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.justplainwiley.eclipse</groupId>
+						<artifactId>b2deploy-task</artifactId>
+						<version>1.1</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<!-- The b2deploy task automatically deploys the war file onto the development 
+						server so you don't have to. -->
+					<target>
+						<taskdef name="b2deploy" classpathref="maven.plugin.classpath"
+							classname="org.oscelot.ant.B2DeployTask" />
+						<b2deploy localfilepath="${project.basedir}/target/${project.artifactId}.war"
+							host="${bbhost}" courseorgavailable="true" clean="true" />
+					</target>
+					<!-- Requires "Starting Block 1.2.3 with Upload" installed on the server. 
+						Download "bb-starting-block-123.war" 
+						from https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335 -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

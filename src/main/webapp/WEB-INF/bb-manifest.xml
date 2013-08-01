@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<plugin>
+		<name value="plugin.title" />
+		<description value="plugin.description" />
+		<default-locale value="en_US" />
+		<handle value="example-handle" />
+		<webapp-type value="javaext"/>
+		<!-- TODO move into a directory to filtered by maven and use ${project.version} -->
+		<version value="1.0.0" />
+		<requires>
+			<bbversion value="8.0" />
+		</requires>
+
+		<vendor>
+			<id value="exam" />
+			<name value="example" />
+			<url value="http://www.example.com" />
+			<description value="" />
+		</vendor>
+
+		<application-defs>
+			<application handle="example-handle" type="shared"
+				use-ssl="false" name="tool.name">
+				<description lang="en_US">tool.description</description>
+				<links>
+					<link>
+						<type value="system_tool" />
+						<name value="tool.system.name" />
+						<url value="springContent" />
+						<description value="tool.system.description" />
+						<icons>
+							<listitem value="images/icon.gif" />
+						</icons>
+					</link>
+				</links>
+			</application>
+		</application-defs>
+		<permissions>
+			<permission type="java.lang.reflect.ReflectPermission" name="suppressAccessChecks" />
+			<permission type="java.util.PropertyPermission" name="*" actions="read,write" />
+			<permission type="java.lang.RuntimePermission" name="createClassLoader" actions="create" />
+			<permission type="java.lang.RuntimePermission" name="setContextClassLoader" actions="*" />
+			<permission type="java.lang.RuntimePermission" name="accessDeclaredMembers" actions="*" />
+			<permission type="java.io.FilePermission" name="ALL FILES" actions="read,write,delete" />
+		</permissions>
+
+	</plugin>
+</manifest>
