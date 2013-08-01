@@ -20,7 +20,7 @@ Finally, make depolyment even easier by Integrating maven with eclipse:
 
 Then a simple `ALT+R, T, 1` will run the last maven invocation which makes reploys even easier!
 
-NOTE: deploying using justplainwiley's b2deploy-task is dependent on (bb-starting-block-123.war)[https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335]
+NOTE: deploying using justplainwiley's b2deploy-task is dependent on [bb-starting-block-123.war](https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335)
 
  
 
