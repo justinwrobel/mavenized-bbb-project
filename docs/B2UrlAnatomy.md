@@ -11,4 +11,4 @@ The above is the constructed Url and the different parts are defined as follows:
 
 ## Sources/inspiration
 
-    Stephen Vickers Reply to "Deep Linking To A Building Block"
+ * [Stephen Vickers Reply to "Deep Linking To A Building Block"](http://forums.edugarage.com/forums/p/2917/8635.aspx#8635)

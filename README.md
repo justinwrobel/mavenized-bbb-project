@@ -12,7 +12,7 @@ Compare one maven command with vanilla eclipse development:
  5. Click Browse and then find the war file
  6. Click Submit
 
-Integrate maven with eclipse by following these steps:
+Finally, make deployment even easier by Integrating maven with eclipse:
  1. Right click on the Project in the Project Explorer 
  2. Click `Run as` > `Maven Build	ALT+SHIFT+X, m`
  3. Type `install antrun:run` in the Goals field
@@ -20,7 +20,7 @@ Integrate maven with eclipse by following these steps:
 
 Then a simple `ALT+R, T, 1` will run the last maven invocation which makes reploys even easier!
 
-NOTE: deploying using justplainwiley's b2deploy-task is dependent on (bb-starting-block-123.war)[https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335]
+NOTE: deploying using justplainwiley's b2deploy-task is dependent on [bb-starting-block-123.war](https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335)
 
  
 
