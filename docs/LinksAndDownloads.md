@@ -2,12 +2,12 @@
 
 ## Blackboard Server Download Links
 
-    * [Blackboard's Download Home page]([1])
-    * [Blackboard v8.0]([2]) - Download "bb-as...jar" by clicking "Release 8.0 HF7 for..."
-    * [Blackboard v9.0]([3]) - Download "bb-as...jar" by clicking "Release 9.0 SP7 for..."
-    * [Blackboard v9.1]([4]) - Download "bb-as...jar" by clicking "Release 9.1 SP11 for..."
-	* [Blackboard's developer Virtual Machine]([5])
-    * [Starting Block]([6]) - Download "bb-starting-block-123.war" by clicking "Starting Block 1.2.3 with Upload"
+ * [Blackboard's Download Home page]([1])
+ * [Blackboard v8.0]([2]) - Download "bb-as...jar" by clicking "Release 8.0 HF7 for..."
+ * [Blackboard v9.0]([3]) - Download "bb-as...jar" by clicking "Release 9.0 SP7 for..."
+ * [Blackboard v9.1]([4]) - Download "bb-as...jar" by clicking "Release 9.1 SP11 for..."
+ * [Blackboard's developer Virtual Machine]([5])
+ * [Starting Block]([6]) - Download "bb-starting-block-123.war" by clicking "Starting Block 1.2.3 with Upload"
 	
 [1]: https://blackboard.secure.force.com/btbb_articleview?id=50170000000WlJfAAK
 [2]: https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx?d=1563
@@ -17,15 +17,15 @@
 [6]: https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335
 
 ## Or find downloads using the search (good luck):
-    Goto [Blackboard's search page]([search])
-    Click "Release" under "Article Types"
-    Look for a link that says something like "Service Pack 7 Hotfix 2"
+ 1. Goto [Blackboard's search page]([search])
+ 2. Click "Release" under "Article Types"
+ 3. Look for a link that says something like "Service Pack 7 Hotfix 2"
 
 [search]: https://blackboard.secure.force.com/apex/btbb_articlesearch?aType=Downloads
 
 ## Blackboard API Links
-    * Blackboard API 9+ [Zips]([7]) and [Html]([8])
-    * Blackboard API 8 [Html]([9])
+ * Blackboard API 9+ [Zips]([7]) and [Html]([8])
+ * Blackboard API 8 [Html]([9])
 
 [7]: http://www.edugarage.com/display/BBDN/Building+Blocks
 [8]: http://library.blackboard.com/ref/598135ae-501e-46f6-9910-190d7ea0a17c/
