@@ -7,28 +7,24 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>example</name>
 	<properties>
-		<bbhost>www.host.com</bbhost>
+		<bb-host>www.host.com</bb-host>
+		<bb-version>9.1.100401.0</blackboard-version>
 	</properties>
 	
 	<repositories>
 		<!-- Local Blackboard repo -->
-		<!-- 
-		Create a local Maven repo with the instructions in the following link
-		http://projects.oscelot.org/gf/project/mavenized_bbb/wiki/?pagename=CreateMavenBlackboardRepository
-		-->
 		<repository>
 			<id>bb</id>
 			<name>Blackboard Repository</name>
-			<url>file://${project.basedir}/repo</url>
+			<url>https://bbprepo.blackboard.com/content/repositories/releases/</url>
 		</repository>
 	</repositories>
 
 	<pluginRepositories>
 		<pluginRepository>
-			<!-- Local Blackboard repo -->
 			<id>bb</id>
 			<name>Blackboard Repository</name>
-			<url>file://${project.basedir}/repo</url>
+			<url>https://bbprepo.blackboard.com/content/repositories/releases/</url>
 		</pluginRepository>
 	</pluginRepositories>
 
@@ -55,12 +51,24 @@
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
-			<version>0.9.18</version>
+			<version>1.0.9</version>
+		</dependency>
+		
+		<!-- Redirect all logging over slf4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>1.7.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
-			<artifactId>jcl104-over-slf4j</artifactId>
-			<version>1.4.2</version>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>1.6.4</version>
 		</dependency>
 
 		<!-- Exclude commons-logging by claiming it will be provided -->
@@ -78,12 +86,11 @@
 		http://projects.oscelot.org/gf/project/mavenized_bbb/wiki/?pagename=CreateMavenBlackboardRepository
 		-->
 		<dependency>
-			<groupId>blackboard.bb</groupId>
+			<groupId>blackboard.platform</groupId>
 			<artifactId>taglibs</artifactId>
-			<version>9.1SP11</version>
+			<version>${bb-version}</version>
 			<scope>provided</scope>
 		</dependency>
-		
 		
 		<!-- Testing -->
 		<dependency>
@@ -102,9 +109,9 @@
 				<version>1.5</version>
 				<dependencies>
 					<dependency>
-						<groupId>com.justplainwiley.eclipse</groupId>
+						<groupId>org.oscelot</groupId>
 						<artifactId>b2deploy-task</artifactId>
-						<version>1.1</version>
+						<version>0.1.0</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -114,7 +121,7 @@
 						<taskdef name="b2deploy" classpathref="maven.plugin.classpath"
 							classname="org.oscelot.ant.B2DeployTask" />
 						<b2deploy localfilepath="${project.basedir}/target/${project.artifactId}.war"
-							host="${bbhost}" courseorgavailable="true" clean="true" />
+							host="${bb-host}" courseorgavailable="true" clean="true" />
 					</target>
 					<!-- Requires "Starting Block 1.2.3 with Upload" installed on the server. 
 						Download "bb-starting-block-123.war" 
