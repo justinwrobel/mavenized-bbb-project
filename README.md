@@ -4,7 +4,7 @@ This is an example mavenized blackboard project that uses B2DeployTask to deploy
 
 Deploying is as easy as `mvn install antrun:run`
 
-Compare one maven command with vanilla eclipse development:
+Compare that one maven command with vanilla eclipse development:
  1. Export Project to war
  2. Navigate to blackboard
  3. Login
