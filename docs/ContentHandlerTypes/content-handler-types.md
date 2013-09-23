@@ -22,8 +22,11 @@
 ##textbook
 ![](textbook.png?raw=true)
 
-##Deprecated types
+##Deprecated types?
 * image 
 * video 
 * audio 
 * file
+
+##Sources/Inspiration
+* [Wiley's bb-manifest.xml reference](http://eclipse.justplainwiley.com/pluginhelp/reference/bb-manifest-ref.html)
