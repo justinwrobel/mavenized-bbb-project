@@ -7,18 +7,19 @@ Currently, there are two authentication frameworks in blackboard:
 
 The Legacy jar based framework was the only way to customize authentication until BB9. The installation 
 procedure was a nightmare and it had to be completely re-installed on updates. Going forward the B2 
-based framework is the recommended way to customize authentication. As you can see below the 
-installation process for the B2 is much simpler.
+based framework is the recommended way to customize authentication. The support model for the an Authentication B2 is 
+simliar to other B2s.
 
 
-B2 Requirements: 
+## Authentication B2 Requirements: 
 
  1. A class that extends AbstractAuthenticationProviderHandler
  2. An <extension/> section in bb-manifest.xml with blackboard.platform.authProviderHandler as the point field.
  3. NOTE: getExtensionId() MUST return extension id contactentated to definition namespace in bb-manifest.xml
 
 e.g., 
-bb-manifest.xml:
+
+**bb-manifest.xml**:
 
 ```
 <extension-defs>
@@ -32,7 +33,7 @@ bb-manifest.xml:
 ```
 
 
-testAuthProviderClass.java:
+**testAuthProviderClass.java**:
 
 ```
 package com.test.handler;
