@@ -1,7 +1,7 @@
 # Blackboard Authentication Framework
 Currently, there are two authentication frameworks in blackboard:
 
- 1. Legacy jar based (Bad) 
+ 1. Legacy jar based (Bad)
  2. B2 based (Good)
 
  The Legacy jar based framework was the only way to customize authentication until BB9. The installation 
