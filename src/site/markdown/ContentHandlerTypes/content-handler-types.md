@@ -1,4 +1,5 @@
 #Content Handler Types
+
 ##newPage
 ![](newPage.png?raw=true)
 ##build
@@ -27,3 +28,6 @@
 * video 
 * audio 
 * file
+
+##Sources/Inspiration
+* (bb-manifest.xml from wiley)[http://eclipse.justplainwiley.com/pluginhelp/reference/bb-manifest-ref.html#content-handlers]
