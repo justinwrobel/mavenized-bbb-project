@@ -14,8 +14,11 @@
 </custom>
 
 <body>
-	<menu name="markdown test">
-		<item href="README.html" name="markdown" />
+	<menu name="Menu">
+		<item href="AuthenticationFramework.html" name="Authentication Frameworks" />
+		<item href="B2UrlAnatomy.html" name="B2 Url Anatomy" />
+		<item href="LinksAndDownloads.html" name="Links and Downloads" />
+		<item href="SetupDeveloperVm.html" name="Setup Developer VM" />
 	</menu>
 	<menu ref="reports" />
 </body>

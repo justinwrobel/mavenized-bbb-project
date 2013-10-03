@@ -14,7 +14,7 @@
 [3]: https://behind.blackboard.com/System-Administrator/Learn/Downloads/download.aspx?d=1581
 [4]: https://behind.blackboard.com/downloads/details.aspx?d=1615
 [5]: https://help.blackboard.com/en-us/Learn/9.1_SP_12_and_SP_13/Administrator/230_Developer_Resources/Developer_Virtual_Machine
-[6]: https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335
+[6]: http://behind.blackboard.com/downloads/details.aspx?d=1669
 
 ## Or find downloads using the search (good luck):
  1. Goto [Blackboard's search page][search]

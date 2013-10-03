@@ -8,8 +8,16 @@
 	<name>example</name>
 	<properties>
 		<bb-host>www.host.com</bb-host>
-		<bb-version>9.1.100401.0</blackboard-version>
+		<bb-version>9.1.110082.0</bb-version>
 	</properties>
+	
+	<developers>
+		<developer>
+			<email>justin.wrobel@laureate.net</email>
+			<name>Justin Wrobel</name>
+			<organization>Laureate International Universities</organization>
+		</developer>
+	</developers>
 	
 	<repositories>
 		<!-- Local Blackboard repo -->
@@ -87,7 +95,7 @@
 		-->
 		<dependency>
 			<groupId>blackboard.platform</groupId>
-			<artifactId>taglibs</artifactId>
+			<artifactId>bb-taglibs</artifactId>
 			<version>${bb-version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -127,6 +135,22 @@
 						Download "bb-starting-block-123.war" 
 						from https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335 -->
 				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.doxia</groupId>
+						<artifactId>doxia-module-markdown</artifactId>
+						<version>1.4</version>
+						
+					</dependency>
+					
+					 
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
