@@ -1,7 +1,7 @@
 # Autostart Developer VM
 
     cd /etc/init.d
-    wget https://raw.github.com/justinwrobel/mavenized-bbb-project/master/docs/blackboard -O /etc/init.d/blackboard
+    wget https://raw.github.com/justinwrobel/mavenized-bbb-project/master/src/site/markdown/blackboard -O /etc/init.d/blackboard
     chmod +x /etc/init.d/blackboard
     chkconfig \--add blackboard
 finally, either restart or type `service blackboard start` and blackboard should start up.
