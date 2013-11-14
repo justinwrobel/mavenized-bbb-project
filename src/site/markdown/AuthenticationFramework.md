@@ -40,7 +40,7 @@ package com.test.handler;
 public class testAuthProviderClass extends AbstractAuthenticationProviderHandler
 ...
 private String namespace = "com.test";
-private String extensionId = "testAuthProvider" ;
+private String extensionId = "testAuthProviderId" ;
 getExtensionId(){return namespace+"."+extensionId;}
 ...
 ```
