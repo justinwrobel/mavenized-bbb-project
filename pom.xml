@@ -8,7 +8,7 @@
 	<name>example</name>
 	<properties>
 		<bb-host>localhost:9876</bb-host>
-		<blackboard.platform-version>9.1.110082.0</bb-version>
+		<blackboard.platform-version>9.1.110082.0</blackboard.platform-version>
 		<org.slf4j-version>1.7.2</org.slf4j-version>
 	</properties>
 
@@ -30,7 +30,6 @@
 	</pluginRepositories>
 
 	<dependencies>
-		<!-- Spring -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>

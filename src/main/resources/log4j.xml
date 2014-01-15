@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC
+"-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender class="org.apache.log4j.DailyRollingFileAppender" name="DAILY_ROLLER">
+		<param value="true" name="append"/>
+		<param value="'.'yyyy-MM-dd" name="DatePattern"/>
+		<param value="${catalina.home}/logs/BbMobileSso.log.%d" name="File"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param value="%d{yyyy-MM-dd HH:mm:ss} | %-5p |%4L:%-50C | %m%n" name="ConversionPattern"/>
+		</layout>
+	</appender>
+	<appender class="org.apache.log4j.ConsoleAppender" name="CONSOLE_OUT_TEST">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} | %-5p |%4L:%-50C | %m%n" />
+		</layout>
+	</appender>
+	<appender class="org.apache.log4j.ConsoleAppender" name="CONSOLE_OUT">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p | %4L:%c | %m%n" />
+		</layout>
+	</appender>
+	<!-- limit extra output with com & org set to WARN -->
+	<logger name="com"><level value="WARN" /></logger>
+	<logger name="org"><level value="WARN" /></logger>
+	<!-- Use more specific namespaces to reveal logging -->
+	<logger name="com.example"><level value="TRACE" /></logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="CONSOLE_OUT" />
+	</root>	
+
+</log4j:configuration>
