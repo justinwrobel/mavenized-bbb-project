@@ -13,7 +13,6 @@
 	</properties>
 
 	<repositories>
-		<!-- Local Blackboard repo -->
 		<repository>
 			<id>bb</id>
 			<name>Blackboard Repository</name>
@@ -36,13 +35,6 @@
 			<version>1.2</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<!-- Logging -->
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.0.9</version>
-		</dependency>
 		
 		<!-- Redirect all logging over slf4j -->
 		<dependency>
@@ -60,6 +52,8 @@
 			<artifactId>jul-to-slf4j</artifactId>
 			<version>${org.slf4j-version}</version>
 		</dependency>
+		
+		<!-- Leverage Blackboard's log4j for logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -76,10 +70,6 @@
 		</dependency>
 
 		<!-- Blackboard -->
-		<!--
-		Install the blackboard jars by following the instructions at 
-		http://projects.oscelot.org/gf/project/mavenized_bbb/wiki/?pagename=CreateMavenBlackboardRepository
-		-->
 		<dependency>
 			<groupId>blackboard.platform</groupId>
 			<artifactId>bb-taglibs</artifactId>
@@ -111,17 +101,17 @@
 					</dependency>
 				</dependencies>
 				<configuration>
-					<!-- The b2deploy task automatically deploys the war file onto the development 
-						server so you don't have to. -->
+					<!-- The b2deploy task automatically deploys the -->
+					<!-- war file onto the development  server. -->
 					<target>
 						<taskdef name="b2deploy" classpathref="maven.plugin.classpath"
 							classname="org.oscelot.ant.B2DeployTask" />
 						<b2deploy localfilepath="${project.basedir}/target/${project.artifactId}.war"
 							host="${bb-host}" courseorgavailable="true" clean="true" />
 					</target>
-					<!-- Requires "Starting Block 1.2.3 with Upload" installed on the server. 
-						Download "bb-starting-block-123.war" 
-						from https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335 -->
+					<!-- Requires "Starting Block 1.2.3 with Upload" installed on the server. -->
+					<!-- Download "bb-starting-block-123.war" from -->
+					<!-- https://behind.blackboard.com/s/developer/dlc/download.aspx?d=1335 -->
 				</configuration>
 			</plugin>
 		</plugins>
