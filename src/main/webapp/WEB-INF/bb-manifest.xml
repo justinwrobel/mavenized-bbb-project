@@ -29,7 +29,7 @@
 					<link>
 						<type value="system_tool" />
 						<name value="tool.system.name" />
-						<url value="springContent" />
+						<url value="hello.jsp" />
 						<description value="tool.system.description" />
 						<icons>
 							<listitem value="images/icon.gif" />
@@ -38,14 +38,5 @@
 				</links>
 			</application>
 		</application-defs>
-		<permissions>
-			<permission type="java.lang.reflect.ReflectPermission" name="suppressAccessChecks" />
-			<permission type="java.util.PropertyPermission" name="*" actions="read,write" />
-			<permission type="java.lang.RuntimePermission" name="createClassLoader" actions="create" />
-			<permission type="java.lang.RuntimePermission" name="setContextClassLoader" actions="*" />
-			<permission type="java.lang.RuntimePermission" name="accessDeclaredMembers" actions="*" />
-			<permission type="java.io.FilePermission" name="ALL FILES" actions="read,write,delete" />
-		</permissions>
-
 	</plugin>
 </manifest>
