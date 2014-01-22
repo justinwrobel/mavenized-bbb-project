@@ -9,7 +9,6 @@
 	<properties>
 		<bb-host>localhost:9876</bb-host>
 		<blackboard.platform-version>9.1.110082.0</blackboard.platform-version>
-		<org.slf4j-version>1.7.2</org.slf4j-version>
 	</properties>
 
 	<repositories>
@@ -36,30 +35,6 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		<!-- Redirect all logging over slf4j -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jcl-over-slf4j</artifactId>
-			<version>${org.slf4j-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>log4j-over-slf4j</artifactId>
-			<version>${org.slf4j-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>jul-to-slf4j</artifactId>
-			<version>${org.slf4j-version}</version>
-		</dependency>
-		
-		<!-- Leverage Blackboard's log4j for logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>${org.slf4j-version}</version>
-		</dependency>
-
 		<!-- Exclude commons-logging by claiming it will be provided -->
 		<!-- so we don't have exclude it everywhere -->
 		<dependency>
